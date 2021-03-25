@@ -1,0 +1,100 @@
+//
+//  ViewController.swift
+//  livery-sdk-ios-example
+//
+//  Created by Jose Nogueira on 25/03/2021.
+//
+
+import UIKit
+import Livery
+
+class ViewController: UIViewController {
+    
+    // MARK: - UI Properties
+    @IBOutlet private weak var playerView: UIView!
+    
+    // MARK: - Properties
+    private let liveSDK = LiverySDK()
+    private var player: Player?
+    
+    // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        initializeLiveSDK()
+        setupPlayerEvents()
+    }
+    
+    // MARK: - Livery SDK Initialization
+    private func initializeLiveSDK() {
+        stop()
+        
+        // Initialize the SDK
+        liveSDK.initialize(streamId: "5ddb98f5e4b0937e6a4507f2", completionQueue: .main) { [weak self] result in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success:
+                // Create a player object
+                self.player = self.liveSDK.createPlayer()
+                if let player = self.player {
+                    // Set a UIView for the player to render into
+                    player.setView(view: self.playerView)
+                }
+                
+                // The player is now ready to play
+                self.play() // If your remote config as 'autoplay' set to true you don't need to call 'play'
+            
+            case .failure(let error):
+                // deal with the initialization error here
+                self.showError(errorMessage: error.localizedDescription)
+            }
+        }
+    }
+    
+    // MARK: - Livery Player Actions
+    private func play() {
+        player?.play(completionQueue: .main) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success:
+                // player is now playing
+                break
+            case .failure(let error):
+                // deal with the play error here
+                self.showError(errorMessage: error.localizedDescription)
+            }
+        }
+    }
+    
+    private func stop() {
+        player?.stop {
+            print("Player did Stop")
+        }
+    }
+    
+    // MARK: - Livery Player Events
+    private func setupPlayerEvents() {
+        // There're several player events to setup observers for, please check the documentation
+        // On this example we're going to setup an observer to the 'playbackChange' event,
+        // which is triggered when playbackState has change
+        NotificationCenter.default.addObserver(self,
+                                       selector: #selector(playbackDidChange),
+                                       name: .playbackChange,
+                                       object: nil)
+    }
+    
+    @objc private func playbackDidChange(_ notification: Notification) {
+        print("Playback state did change")
+        
+        guard let stateString = (notification.object as? Player.PlaybackState)?.description  else { return }
+        print("Playback State Now:  \(stateString)")
+    }
+    
+    // MARK: - Error Alert View
+    private func showError(errorMessage: String) {
+        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+}
