@@ -1,4 +1,4 @@
-# livery-sdk-ios-example
+# Livery iOS SDK example app
 Example application which demonstrates how to use the Livery iOS SDK
 
 Built using XCode 12.4 (12D4e) (Swift 5)
