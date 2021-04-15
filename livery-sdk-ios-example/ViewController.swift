@@ -17,12 +17,15 @@ class ViewController: UIViewController {
     private let liveSDK = LiverySDK()
     private var player: Player?
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initializeLiveSDK()
-        setupPlayerEvents()
     }
     
     // MARK: - Livery SDK Initialization
@@ -40,6 +43,9 @@ class ViewController: UIViewController {
                 if let player = self.player {
                     // Set a UIView for the player to render into
                     player.setView(view: self.playerView)
+                    
+                    // Set 'self' as the class that implements the PlayerDelegate protocol to receive the Player Events
+                    player.delegate = self
                 }
                 
                 // The player is now ready to play
@@ -73,22 +79,11 @@ class ViewController: UIViewController {
         }
     }
     
-    // MARK: - Livery Player Events
-    private func setupPlayerEvents() {
-        // There're several player events to setup observers for, please check the documentation
-        // On this example we're going to setup an observer to the 'playbackChange' event,
-        // which is triggered when playbackState has change
-        NotificationCenter.default.addObserver(self,
-                                       selector: #selector(playbackDidChange),
-                                       name: .playbackChange,
-                                       object: nil)
-    }
-    
     @objc private func playbackDidChange(_ notification: Notification) {
         print("Playback state did change")
         
         guard let stateString = (notification.object as? Player.PlaybackState)?.description  else { return }
-        print("Playback State Now:  \(stateString)")
+        print("Playback State Now: \(stateString)")
     }
     
     // MARK: - Error Alert View
@@ -96,5 +91,13 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+}
+
+// MARK: - PlayerDelegate
+extension ViewController: PlayerDelegate {
+    func playbackStateDidChange(playbackState: Player.PlaybackState) {
+        print("Playback state did change")
+        print("Playback State Now: \(playbackState.description)")
     }
 }
