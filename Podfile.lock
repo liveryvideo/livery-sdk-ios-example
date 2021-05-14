@@ -1,7 +1,7 @@
 PODS:
-  - AWSCore (2.23.3)
-  - AWSPinpoint (2.23.3):
-    - AWSCore (= 2.23.3)
+  - AWSCore (2.24.1)
+  - AWSPinpoint (2.24.1):
+    - AWSCore (= 2.24.1)
   - google-cast-sdk-no-bluetooth (4.5.3):
     - google-cast-sdk-no-bluetooth/Core (= 4.5.3)
     - GTMSessionFetcher/Core (~> 1.1)
@@ -10,19 +10,19 @@ PODS:
     - GTMSessionFetcher/Core (~> 1.1)
     - Protobuf (~> 3.13)
   - GTMSessionFetcher/Core (1.5.0)
-  - Livery (1.0.0):
+  - Livery (1.1.0):
     - AWSPinpoint (~> 2.23)
     - google-cast-sdk-no-bluetooth (~> 4.5)
     - Sentry (~> 6.2)
     - TrueTime (~> 5.0.3)
-  - Protobuf (3.15.8)
+  - Protobuf (3.17.0)
   - Sentry (6.2.1):
     - Sentry/Core (= 6.2.1)
   - Sentry/Core (6.2.1)
   - TrueTime (5.0.3)
 
 DEPENDENCIES:
-  - Livery (= 1.0.0)
+  - Livery (= 1.1.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -37,15 +37,15 @@ SPEC REPOS:
     - Livery
 
 SPEC CHECKSUMS:
-  AWSCore: c60e635b1a61cb27b6dfff646ce9f402be870b62
-  AWSPinpoint: 72c99dbf5c37464f87cbf4515d6d027c996ddc96
+  AWSCore: f6cfada8b48d569c11b94e49e8fb184b9c1a2e7e
+  AWSPinpoint: 3fb2a0cc2879c26df6c370a27c5def4f2a370ebd
   google-cast-sdk-no-bluetooth: 815df973d547e06a90768f4a72220950cd32d8cb
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
-  Livery: 0dcb923de44458bcb373ca5da50c1d07a4af36b2
-  Protobuf: adb85cd18a15bd1a777c158af9fd6e612a0e6d69
+  Livery: 266b4203b3e1a6ca3a8e0b193684c67c89b4646a
+  Protobuf: 7327d4444215b5f18e560a97f879ff5503c4581c
   Sentry: 9b922b396b0e0bca8516a10e36b0ea3ebea5faf7
   TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
 
-PODFILE CHECKSUM: 040f4af7ab68293b63323aabe02c4e4cfc81bb72
+PODFILE CHECKSUM: 24d09223968833d62d81d16ce321a61e3679459e
 
 COCOAPODS: 1.10.1
