@@ -1,18 +1,12 @@
 PODS:
-  - AWSCore (2.24.1)
-  - AWSPinpoint (2.24.1):
-    - AWSCore (= 2.24.1)
-  - google-cast-sdk-no-bluetooth (4.5.3):
-    - google-cast-sdk-no-bluetooth/Core (= 4.5.3)
-    - GTMSessionFetcher/Core (~> 1.1)
-    - Protobuf (~> 3.13)
-  - google-cast-sdk-no-bluetooth/Core (4.5.3):
-    - GTMSessionFetcher/Core (~> 1.1)
-    - Protobuf (~> 3.13)
-  - GTMSessionFetcher/Core (1.5.0)
-  - Livery (1.1.0):
-    - AWSPinpoint (~> 2.23)
-    - google-cast-sdk-no-bluetooth (~> 4.5)
+  - AWSCore (2.24.4)
+  - AWSPinpoint (2.24.4):
+    - AWSCore (= 2.24.4)
+  - google-cast-sdk-no-bluetooth-dynamic-ios (4.4.7):
+    - Protobuf (~> 3.0)
+  - Livery (1.2.2):
+    - AWSPinpoint (~> 2.24)
+    - google-cast-sdk-no-bluetooth-dynamic-ios (~> 4.4)
     - Sentry (~> 6.2)
     - TrueTime (~> 5.0.3)
   - Protobuf (3.17.0)
@@ -22,14 +16,13 @@ PODS:
   - TrueTime (5.0.3)
 
 DEPENDENCIES:
-  - Livery (= 1.1.0)
+  - Livery (= 1.2.2)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AWSCore
     - AWSPinpoint
-    - google-cast-sdk-no-bluetooth
-    - GTMSessionFetcher
+    - google-cast-sdk-no-bluetooth-dynamic-ios
     - Protobuf
     - Sentry
     - TrueTime
@@ -37,15 +30,14 @@ SPEC REPOS:
     - Livery
 
 SPEC CHECKSUMS:
-  AWSCore: f6cfada8b48d569c11b94e49e8fb184b9c1a2e7e
-  AWSPinpoint: 3fb2a0cc2879c26df6c370a27c5def4f2a370ebd
-  google-cast-sdk-no-bluetooth: 815df973d547e06a90768f4a72220950cd32d8cb
-  GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
-  Livery: 266b4203b3e1a6ca3a8e0b193684c67c89b4646a
+  AWSCore: 31ae3b5c184d22af33d0f6dbf0245c7100763097
+  AWSPinpoint: 2c23a668f66c1cca30848b4338dead37105a67cd
+  google-cast-sdk-no-bluetooth-dynamic-ios: 5764b5bc59e96334d9c10475d682b3bf515cab78
+  Livery: 5939c1d1fc0c034f08d3ea3a75f622f61bb7aed9
   Protobuf: 7327d4444215b5f18e560a97f879ff5503c4581c
   Sentry: 9b922b396b0e0bca8516a10e36b0ea3ebea5faf7
   TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
 
-PODFILE CHECKSUM: 24d09223968833d62d81d16ce321a61e3679459e
+PODFILE CHECKSUM: c5531782a2cda16bfc44598ae7c959d7ff903a4a
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2
