@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Livery SDK Version: \(LiverySDK.sdkVersion)")
         initializeLiveSDK()
     }
     
