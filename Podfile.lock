@@ -4,7 +4,7 @@ PODS:
     - AWSCore (= 2.26.1)
   - google-cast-sdk-no-bluetooth-dynamic-ios (4.4.7):
     - Protobuf (~> 3.0)
-  - Livery (1.2.5):
+  - Livery (1.3.0):
     - AWSPinpoint (~> 2.26)
     - google-cast-sdk-no-bluetooth-dynamic-ios (~> 4.4)
     - Sentry (~> 6.2)
@@ -16,7 +16,7 @@ PODS:
   - TrueTime (5.0.3)
 
 DEPENDENCIES:
-  - Livery (= 1.2.5)
+  - Livery (= 1.3.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -33,11 +33,11 @@ SPEC CHECKSUMS:
   AWSCore: 0f855e20ccb13e028932b737f0706023a9561399
   AWSPinpoint: 1f5ee40a31fc0ef8187a671bcb8340139f5ef943
   google-cast-sdk-no-bluetooth-dynamic-ios: 5764b5bc59e96334d9c10475d682b3bf515cab78
-  Livery: 22ffd1e7f6944fadd27805487e8c3e7a39115a4a
+  Livery: 968643e44b5e31565e598884dcd04f8f9afb124a
   Protobuf: 0ac2cdc92fb5c33dab66dd1c4e9f9cc4c34d00ba
   Sentry: 9b922b396b0e0bca8516a10e36b0ea3ebea5faf7
   TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
 
-PODFILE CHECKSUM: 13682362bb7c41944d05fb171c264da1f2b6b75a
+PODFILE CHECKSUM: 192a0537152b9d8998196f2203461110910dc81b
 
 COCOAPODS: 1.11.2
