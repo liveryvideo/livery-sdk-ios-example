@@ -7,7 +7,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/exmg/livery-sdk-ios-podspec.git'
 
 target 'livery-sdk-ios-example' do
-  pod "Livery", "1.4.1"
+  pod "Livery", "2.0.0"
   
   post_install do |installer|
     installer.pods_project.build_configuration_list.build_configurations.each do |configuration|
