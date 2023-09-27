@@ -7,11 +7,5 @@ source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/exmg/livery-sdk-ios-podspec.git'
 
 target 'livery-sdk-ios-example' do
-  pod "Livery", "2.0.1"
-  
-  post_install do |installer|
-    installer.pods_project.build_configuration_list.build_configurations.each do |configuration|
-      configuration.build_settings['ARCHS'] = 'arm64'
-    end
-  end
+  pod "Livery", "2.1.0"
 end
