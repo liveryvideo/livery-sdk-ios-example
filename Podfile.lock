@@ -1,47 +1,39 @@
 PODS:
-  - AWSCore (2.33.4)
-  - AWSPinpoint (2.33.4):
-    - AWSCore (= 2.33.4)
-  - google-cast-sdk-no-bluetooth-dynamic-ios (4.4.7):
-    - Protobuf (~> 3.0)
+  - AWSCore (2.36.0)
+  - AWSPinpoint (2.36.0):
+    - AWSCore (= 2.36.0)
   - Kronos (4.2.2)
-  - Livery (2.1.0):
-    - AWSPinpoint (~> 2.30)
-    - google-cast-sdk-no-bluetooth-dynamic-ios (~> 4.4)
+  - Livery (3.0.0):
+    - AWSPinpoint (~> 2.36)
     - Kronos (~> 4.2)
-    - lottie-ios (~> 3.4)
-    - Sentry (~> 6.2)
-  - lottie-ios (3.5.0)
-  - Protobuf (3.24.3)
-  - Sentry (6.2.1):
-    - Sentry/Core (= 6.2.1)
-  - Sentry/Core (6.2.1)
+    - lottie-ios (~> 4.4)
+    - Sentry (~> 8.24)
+  - lottie-ios (4.4.3)
+  - Sentry (8.25.0):
+    - Sentry/Core (= 8.25.0)
+  - Sentry/Core (8.25.0)
 
 DEPENDENCIES:
-  - Livery (= 2.1.0)
+  - Livery (= 3.0.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AWSCore
     - AWSPinpoint
-    - google-cast-sdk-no-bluetooth-dynamic-ios
     - Kronos
     - lottie-ios
-    - Protobuf
     - Sentry
   https://github.com/exmg/livery-sdk-ios-podspec.git:
     - Livery
 
 SPEC CHECKSUMS:
-  AWSCore: 83e3416d2224ba98b61d8eadcfcb1f90f48fab82
-  AWSPinpoint: e13098188d2907874edbca23df7fbb1b4a0992ba
-  google-cast-sdk-no-bluetooth-dynamic-ios: 5764b5bc59e96334d9c10475d682b3bf515cab78
+  AWSCore: 6a3038e6c0b13be3d1fbb4746f98aab44f750e4d
+  AWSPinpoint: 0d01d96669b69a8b0696f1d85448d5cc35872704
   Kronos: dfa27819541f9f1bf6834d5bfefa792f499001bb
-  Livery: d5feb896827a0c3f33c4baeef922e6036bb96631
-  lottie-ios: c55158d67d0629a260625cc2ded2052b829e3c3e
-  Protobuf: 970f7ee93a3a08e3cf64859b8efd95ee32b4f87f
-  Sentry: 9b922b396b0e0bca8516a10e36b0ea3ebea5faf7
+  Livery: 154ba7707e8db7a2edf741865eedb9ed0604922c
+  lottie-ios: fcb5e73e17ba4c983140b7d21095c834b3087418
+  Sentry: cd86fc55628f5b7c572cabe66cc8f95a9d2f165a
 
-PODFILE CHECKSUM: c0a87f7f57622d6e02df9704bf860a22aaf0898e
+PODFILE CHECKSUM: 0d4c2da72808595ec939c0b670f816fb463ac5f5
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.15.2
